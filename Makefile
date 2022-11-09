@@ -1,3 +1,15 @@
+
+# Which architecture to build
+ARCH ?= amd64
+
+# The docker image name
+IMAGE := dealltest
+
+REGISTRY := andryhardiyanto
+
+# This version-strategy uses git tags to set the version string
+VERSION := $(shell git describe --tags --always --dirty)
+
 ## test: run test coverage on all package
 test:
 	@go test -v -cover -coverprofile=coverage.out -p 1 ./... 
@@ -15,3 +27,28 @@ docker-compose:
 ## mock: run mockgen on all package
 mock:
 	@go generate ./...
+
+## build docker image
+docker: Dockerfile
+	echo "building the $(IMAGE) container..."
+	docker build --build-arg "VERSION=$(VERSION)" --label "version=$(VERSION)" -t $(IMAGE):$(VERSION) .
+
+## push docker image to dockerhub registry
+push-docker: .push-docker
+.push-docker:
+	docker tag $(IMAGE):$(VERSION) $(REGISTRY)/$(IMAGE):$(VERSION)
+	docker push $(REGISTRY)/$(IMAGE):$(VERSION)
+	echo "pushed: $(REGISTRY)/$(IMAGE):$(VERSION)"
+
+## deploy k8s
+deploy-k8s: 
+	echo "apply postgres-configmap"
+	kubectl apply -f scripts/postgresl/postgres-configmap.yaml
+	echo "apply postgres-storage"
+	kubectl apply -f scripts/postgresl/postgres-storage.yaml
+	echo "apply postgres-deployment"
+	kubectl apply -f scripts/postgresl/postgres-deployment.yaml
+	echo "apply postgres-service"
+	kubectl apply -f scripts/postgresl/postgres-service.yaml
+	echo "apply user-deployment"
+	kubectl apply -f scripts/deployment.yaml

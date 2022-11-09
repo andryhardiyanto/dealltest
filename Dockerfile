@@ -11,13 +11,7 @@ WORKDIR /app
 
 # Copy go mod and sum files
 COPY go.mod go.sum ./
-
-# set arg and env for Access Token github
-ARG GITHUB_TOKEN
-ENV GITHUB_TOKEN=$GITHUB_TOKEN
-
-RUN git config --global url."https://AndryHardiyanto:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
-
+COPY .env ./ 
 # Download all dependancies. Dependencies will be cached if the go.mod and go.sum files are not changed
 RUN go mod download
 

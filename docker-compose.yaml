@@ -9,8 +9,6 @@ services:
     build:
       context: . # Use an image built from the specified dockerfile in the current directory.
       dockerfile: ./Dockerfile
-      args:
-        - GITHUB_TOKEN=${GITHUB_TOKEN}
     ports:
       - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
     restart: on-failure
