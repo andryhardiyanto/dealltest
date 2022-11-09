@@ -13,3 +13,7 @@ pass: admin
 3. dont forget register account in ngrok, use ngrok for TCP tunnel to local port postgres [TCP](https://ngrok.com/docs/secure-tunnels/tunnels/tcp-tunnels)
 4. after doing tcp tunnel in ngrok for postgresql, don't forget to change env for database in `/scripts/deployment.yaml`
 5. running command make deploy-k8s
+
+
+## Diagram
+[Architecture Diagram](https://github.com/AndryHardiyanto/dealltest/blob/main/docs/diagram/diagram.png)
