@@ -1,0 +1,31 @@
+# Start from golang:1.18-alpine base image
+FROM golang:1.18-alpine
+
+# The latest alpine images don't have some tools like (`git` and `bash`).
+# Adding git, bash and openssh to the image
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+
+# Set the Current Working Directory inside the container
+WORKDIR /app
+
+# Copy go mod and sum files
+COPY go.mod go.sum ./
+
+# set arg and env for Access Token github
+ARG GITHUB_TOKEN
+ENV GITHUB_TOKEN=$GITHUB_TOKEN
+
+RUN git config --global url."https://AndryHardiyanto:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+# Download all dependancies. Dependencies will be cached if the go.mod and go.sum files are not changed
+RUN go mod download
+
+# Copy the source from the current directory to the Working Directory inside the container
+COPY . .
+
+# Build the Go app
+RUN go build -o ./main ./cmd
+
+# Run the executable
+CMD ["./main"]

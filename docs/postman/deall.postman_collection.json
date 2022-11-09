@@ -1,0 +1,2460 @@
+{
+	"info": {
+		"_postman_id": "36c7a49c-7cad-4aee-8b4c-4de45fa1456c",
+		"name": "deall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin - read account",
+			"item": [
+				{
+					"name": "Get account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get account",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:05:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"OK\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"admin@admin.com\",\n        \"role\": \"admin\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_NOT_FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_NOT_FOUND",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:06:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"USER_NOT_FOUND\",\n    \"message\": \"User tidak ditemukan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UNPROCESSABLE_ENTITY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account/Asasda",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"Asasda"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNPROCESSABLE_ENTITY",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account/Asasda",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"Asasda"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:06:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"UNPROCESSABLE_ENTITY\",\n    \"message\": \"Request yang dikirim tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PERMISSION_DENIED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE2ODQsImp0aSI6IjFlMDE2NGE0LTk0ZjctNDNlZi05ZTVmLTQ4NDQ1YTliZmEzMSIsImlhdCI6MTY2Nzk1NTY4NCwibmJmIjoxNjY3OTU1Njg0LCJzdWIiOiIxIn0.-iorkwvyhfS97e36UvXHmm1aLJdfwN5u5bhtepo6lR3LhLnfuWpV5QxowDaNSqtcl7MdLLN1nJRqZ4ouR8O8bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account/Asasda",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"Asasda"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PERMISSION_DENIED",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account/Asasda",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"Asasda"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:07:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"PERMISSION_DENIED\",\n    \"message\": \"Anda tidak memiliki akses\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin - create account",
+			"item": [
+				{
+					"name": "success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"user\",\n    \"email\":\"andry@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:25:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"CREATED\",\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:29:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"CREATED\",\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "EMAIL_ALREADY_EXISTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "EMAIL_ALREADY_EXISTS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:31:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"EMAIL_ALREADY_EXISTS\",\n    \"message\": \"Email sudah terdaftar\"\n}"
+						}
+					]
+				},
+				{
+					"name": "INVALID_ROLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "INVALID_ROLE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:28:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"INVALID_ROLE\",\n    \"message\": \"Role tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UNPROCESSABLE_ENTITY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNPROCESSABLE_ENTITY",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:27:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"UNPROCESSABLE_ENTITY\",\n    \"message\": \"Request yang dikirim tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PERMISSION_DENIED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE2ODQsImp0aSI6IjFlMDE2NGE0LTk0ZjctNDNlZi05ZTVmLTQ4NDQ1YTliZmEzMSIsImlhdCI6MTY2Nzk1NTY4NCwibmJmIjoxNjY3OTU1Njg0LCJzdWIiOiIxIn0.-iorkwvyhfS97e36UvXHmm1aLJdfwN5u5bhtepo6lR3LhLnfuWpV5QxowDaNSqtcl7MdLLN1nJRqZ4ouR8O8bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PERMISSION_DENIED",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:27:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"PERMISSION_DENIED\",\n    \"message\": \"Anda tidak memiliki akses\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin - update account",
+			"item": [
+				{
+					"name": "success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"password\":\"test\",\n    \"role\":\"admin\",\n    \"email\":\"tes@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\",\n    \"password\":\"test\",\n    \"role\":\"admin\",\n    \"email\":\"tes@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:07:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "success update name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success update name",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:09:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "success update password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"tesasdt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success update password",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\":\"tesasdt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:09:17 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "success update role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\":\"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success update role",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"role\":\"user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:08:42 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "success update email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"te1s@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success update email",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"te1s@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:07:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "EMAIL_ALREADY_EXISTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"andry1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "EMAIL_ALREADY_EXISTS",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"andry1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:12:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"EMAIL_ALREADY_EXISTS\",\n    \"message\": \"Email sudah terdaftar\"\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_NOT_FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"andr222y1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/41",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"41"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_NOT_FOUND",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"andr222y1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/41",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"41"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:12:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"USER_NOT_FOUND\",\n    \"message\": \"User tidak ditemukan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "INVALID_ROLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "INVALID_ROLE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:28:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"INVALID_ROLE\",\n    \"message\": \"Role tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UNPROCESSABLE_ENTITY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNPROCESSABLE_ENTITY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"\",\n    \"password\":\"\",\n    \"role\":\"\",\n    \"email\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:11:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"UNPROCESSABLE_ENTITY\",\n    \"message\": \"Request yang dikirim tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PERMISSION_DENIED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE2ODQsImp0aSI6IjFlMDE2NGE0LTk0ZjctNDNlZi05ZTVmLTQ4NDQ1YTliZmEzMSIsImlhdCI6MTY2Nzk1NTY4NCwibmJmIjoxNjY3OTU1Njg0LCJzdWIiOiIxIn0.-iorkwvyhfS97e36UvXHmm1aLJdfwN5u5bhtepo6lR3LhLnfuWpV5QxowDaNSqtcl7MdLLN1nJRqZ4ouR8O8bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PERMISSION_DENIED",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"2"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 02:11:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"PERMISSION_DENIED\",\n    \"message\": \"Anda tidak memiliki akses\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin - delete account",
+			"item": [
+				{
+					"name": "success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:42:27 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "CANNOT_DELETE_SELF",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CANNOT_DELETE_SELF",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"admin\",\n    \"email\":\"andry1@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:43:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"CANNOT_DELETE_SELF\",\n    \"message\": \"tidak bisa delete account sendiri\"\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_NOT_FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/321",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"321"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_NOT_FOUND",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"andry\",\n    \"password\":\"andry\",\n    \"role\":\"userS\",\n    \"email\":\"andry@andry.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/321",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"321"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:44:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"USER_NOT_FOUND\",\n    \"message\": \"User tidak ditemukan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UNPROCESSABLE_ENTITY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/v1/account/asdasd",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"asdasd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNPROCESSABLE_ENTITY",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/v1/account/asdasd",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"asdasd"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:44:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"UNPROCESSABLE_ENTITY\",\n    \"message\": \"Request yang dikirim tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PERMISSION_DENIED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE2ODQsImp0aSI6IjFlMDE2NGE0LTk0ZjctNDNlZi05ZTVmLTQ4NDQ1YTliZmEzMSIsImlhdCI6MTY2Nzk1NTY4NCwibmJmIjoxNjY3OTU1Njg0LCJzdWIiOiIxIn0.-iorkwvyhfS97e36UvXHmm1aLJdfwN5u5bhtepo6lR3LhLnfuWpV5QxowDaNSqtcl7MdLLN1nJRqZ4ouR8O8bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PERMISSION_DENIED",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account",
+										"4"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:43:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"PERMISSION_DENIED\",\n    \"message\": \"Anda tidak memiliki akses\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user - read account",
+			"item": [
+				{
+					"name": "Get account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get account",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/account",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:08:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"OK\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"admin@admin.com\",\n        \"role\": \"admin\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@admin.com\",\n    \"password\":\"aasdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin@admin.com\",\n    \"password\":\"aasdasd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:02:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "702"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"OK\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTE3MjMsImp0aSI6IjQ2YzgwNTc5LTAyNjAtNDg5Zi1hMzMyLTRjMzE3ODgwZjVjNCIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.p2K93r_iBxoa5_L-yMpD7w-T3CQyic2zgCCNyWXzEqRtlifxpi6sLqU4NtQrGnjPl_mK_Lyx4qWMDLpbSr3mcw\",\n        \"access_exp\": 1667991723,\n        \"refresh_token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjg1MjMsImp0aSI6IjhlYmZkMThjLWNiYzUtNDYxNC1hZjVlLTU4Nzc0YjY2NjQwNSIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.RsTAoCACRbnc7T-gFkVpgNmoHwK_UTJlMedCub6sk0L5QiVVC1C7d1Z9sVZAMSpDmR_nHU1OboA27D9E6P767w\",\n        \"refresh_exp\": 1667991723\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PASSWORD_NOT_MATCH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"0831812312\",\n    \"password\":\"fsgDs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PASSWORD_NOT_MATCH",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\":\"0831812312\",\n    \"password\":\"fsgDs\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Nov 2022 10:38:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Type\": \"PASSWORD_NOT_MATCH\",\n    \"Message\": \"Password yang diinput salah\"\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_NOT_FOUND",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"83184802212232\",\n    \"password\":\"fgDs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_NOT_FOUND",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\":\"83184802212232\",\n    \"password\":\"fgDs\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Nov 2022 10:37:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Type\": \"USER_NOT_FOUND\",\n    \"Message\": \"User tidak ditemukan\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "renew access token",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjg1MjMsImp0aSI6IjhlYmZkMThjLWNiYzUtNDYxNC1hZjVlLTU4Nzc0YjY2NjQwNSIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.RsTAoCACRbnc7T-gFkVpgNmoHwK_UTJlMedCub6sk0L5QiVVC1C7d1Z9sVZAMSpDmR_nHU1OboA27D9E6P767w\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/renew/access",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"renew",
+								"access"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjg1MjMsImp0aSI6IjhlYmZkMThjLWNiYzUtNDYxNC1hZjVlLTU4Nzc0YjY2NjQwNSIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.RsTAoCACRbnc7T-gFkVpgNmoHwK_UTJlMedCub6sk0L5QiVVC1C7d1Z9sVZAMSpDmR_nHU1OboA27D9E6P767w\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/renew/access",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"renew",
+										"access"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:10:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "702"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"OK\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc5OTIyMzksImp0aSI6ImY3MGRmN2RiLWVjMDQtNDMyNC05MmViLWQ1ZjY0YTY5YjhmMCIsImlhdCI6MTY2Nzk1NjIzOSwibmJmIjoxNjY3OTU2MjM5LCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.UtTinJUdKwpk_ycSf7UEkpQyr5N4ca4OSXwG-AVitmgdHdlKVX9Ex7WsVCvYd42mE5YVVeMSK5A2Bi8nsFc15g\",\n        \"access_exp\": 1667992239,\n        \"refresh_token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjkwMzksImp0aSI6ImJjMDRmYTYxLWZhMjItNDdjZi04ZWE5LTYyNmE5NDYwMGIxYyIsImlhdCI6MTY2Nzk1NjIzOSwibmJmIjoxNjY3OTU2MjM5LCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.QgwxwzXsYekwoFJWiYW6Pr0m-TwJWPBIVOHuce8hCMykvGYT5zjsul6V5q7cLo7HJ25RDXGzQqTR7HDiJ1t90w\",\n        \"refresh_exp\": 1667992239\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UNAUTHORIZED",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjg1MjMsImp0aSI6IjhlYmZkMThjLWNiYzUtNDYxNC1hZjVlLTU4Nzc0YjY2NjQwNSIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.RsTAoCACRbnc7T-gFkVpgNmoHwK_UTJlMedCub6sk0L5QiVVC1C7d1Z9sVsZAMSpDmR_nHU1OboA27D9E6P767w\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/renew/access",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"renew",
+								"access"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNAUTHORIZED",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjgxMjg1MjMsImp0aSI6IjhlYmZkMThjLWNiYzUtNDYxNC1hZjVlLTU4Nzc0YjY2NjQwNSIsImlhdCI6MTY2Nzk1NTcyMywibmJmIjoxNjY3OTU1NzIzLCJzdWIiOiIxIiwicm9sZSI6ImFkbWluIn0.RsTAoCACRbnc7T-gFkVpgNmoHwK_UTJlMedCub6sk0L5QiVVC1C7d1Z9sVsZAMSpDmR_nHU1OboA27D9E6P767w\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/renew/access",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"renew",
+										"access"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Nov 2022 01:12:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"UNAUTHORIZED\",\n    \"message\": \"Anda tidak memiliki akses\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
