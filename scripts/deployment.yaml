@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-deployment
+  labels:
+    app: user
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+        - name: user-pod
+          image: andryhardiyanto/dealltest:7f5f2bc
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DEALL_DATABASE_CONNECTION
+              value: "postgres://postgres:postgres@0.tcp.ap.ngrok.io:10200/deall?sslmode=disable"
+  
+

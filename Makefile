@@ -42,5 +42,13 @@ push-docker: .push-docker
 
 ## deploy k8s
 deploy-k8s: 
+	echo "apply postgres-configmap"
+	kubectl apply -f scripts/postgresl/postgres-configmap.yaml
+	echo "apply postgres-storage"
+	kubectl apply -f scripts/postgresl/postgres-storage.yaml
+	echo "apply postgres-deployment"
+	kubectl apply -f scripts/postgresl/postgres-deployment.yaml
+	echo "apply postgres-service"
+	kubectl apply -f scripts/postgresl/postgres-service.yaml
 	echo "apply user-deployment"
 	kubectl apply -f scripts/deployment.yaml
