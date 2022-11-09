@@ -41,19 +41,19 @@ func RegisterConfig() {
 	}
 	Cfg = Config{
 		Server: Server{
-			Port:    libEnv.GetStringOrDefault("MONEY_SERVER_PORT", ""),
-			GinMode: libEnv.GetStringOrDefault("MONEY_SERVER_GIN_MODE", ""),
+			Port:    libEnv.GetStringOrDefault("DEALL_SERVER_PORT", ""),
+			GinMode: libEnv.GetStringOrDefault("DEALL_SERVER_GIN_MODE", ""),
 		},
 		Database: Database{
-			DatabaseConnection: libEnv.GetStringOrDefault("MONEY_DATABASE_CONNECTION", ""),
+			DatabaseConnection: libEnv.GetStringOrDefault("DEALL_DATABASE_CONNECTION", ""),
 		},
 		Jwt: Jwt{
-			SignedSecret:       libEnv.GetStringOrDefault("MONEY_JWT_SIGNED_SECRET", ""),
-			AccessExpDuration:  libEnv.GetTimeDurationInHourOrDefault("MONEY_JWT_ACCESS_EXP_DURATION", 0),
-			RefreshExpDuration: libEnv.GetTimeDurationInHourOrDefault("MONEY_JWT_REFRESH_EXP_DURATION", 0),
+			SignedSecret:       libEnv.GetStringOrDefault("DEALL_JWT_SIGNED_SECRET", ""),
+			AccessExpDuration:  libEnv.GetTimeDurationInHourOrDefault("DEALL_JWT_ACCESS_EXP_DURATION", 0),
+			RefreshExpDuration: libEnv.GetTimeDurationInHourOrDefault("DEALL_JWT_REFRESH_EXP_DURATION", 0),
 		},
 		Logger: Logger{
-			Debug: libEnv.GetBoolOrDefault("MONEY_LOGGER_DEBUD", false),
+			Debug: libEnv.GetBoolOrDefault("DEALL_LOGGER_DEBUD", false),
 		},
 	}
 }
